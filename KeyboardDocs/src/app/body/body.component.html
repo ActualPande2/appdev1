@@ -1,0 +1,93 @@
+<div class="profile-container">
+    <section class="profile-header">
+        <div class="profile-img-container">
+            <img class="profile_img" src="HansLopez.jpg" alt="image">
+        </div>
+        <div class="profile-details">
+            <div class="name-container">
+                <h1 [style.color]="currentColor">{{profile.name}}</h1>
+                <button (click)="changeNameColor()" class="color-change-btn">
+                    <i class="fas fa-pallete"></i> Change Color
+                </button>
+            </div>
+            <h2 class="profile-address">{{profile.address}}</h2>
+            <p class="about">{{profile.about}}</p>
+        </div>
+    </section>
+
+
+<section class="profile-section">
+    <h3>Skills: </h3>
+    <div class="skills">
+        @for (skills of profile.skills; track skills){
+            <span class="skill-tag">
+                {{skills}}
+            </span>
+        }
+    </div>
+</section>
+
+<section class="profile-section">
+    <h3>Experience: </h3>
+    <div class="experience">
+        @for (job of profile.experience; track job.role){
+            <div class="experience-item">
+                <h4>
+                    {{job.role}} at {{job.company}}
+                    {{job.location ? '- ' + job.location : ''}}
+                </h4>
+                <p class="period">
+                    {{job.period}}
+                </p>
+                <p>
+                    {{job.description}}
+                </p>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="profile-section">
+    <h3>Awards: </h3>
+    <div class="awards">
+        @for (award of profile.awards; track award.title) {
+            <div class="award-item">
+                <h4>{{award.title}}</h4>
+                <p><strong>Issuer:</strong> {{award.issuer}}</p>
+                <p class="period"><strong>Year:</strong> {{award.year}}</p>
+                <p>{{award.description}}</p>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="profile-section">
+    <h3>Education: </h3>
+    <div class="education">
+        <h4>{{profile.education.degree}}</h4>
+        <p>profile.education.school</p>
+        <p class="period">
+            {{profile.education.year}}
+        </p>
+    </div>
+</section>
+
+<section class="profile-section">
+    <h3>Currently Enrolled Courses</h3>
+    <div class="courses">
+        @for (course of profile.courses; track course.code) {
+            <div class="course-item">
+                <strong>{{course.code}}</strong>: {{course.name}}<br>
+                <span class="teacher">Teacher: {{course.teacher}}</span>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="profile-section contact-info">
+    <h3>Contact: </h3>
+    <p><i class="fas fa-envelope"></i>{{profile.contact.emial}}</p>
+    <p><i class="fas fa-phone"></i>{{profile.contact.phone}}</p>
+    <p><i class="fas fa-map-marker-alt"></i>{{profile.contact.location}}</p>
+</section>
+</div>
