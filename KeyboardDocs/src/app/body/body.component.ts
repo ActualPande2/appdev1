@@ -7,18 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
-  //array of colors
-  colors: string[] = ['Red','Blue','Yellow','Green','Orange','Purple']
-  currentColorIndex: number = 0;
-  //fuction to change color of name
-  changeNameColor(){
-    this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
-  }
-  //get current color
-  get currentColor(): string {
-    return this.colors 
-    [this.currentColorIndex]
-  }
 
   profile = {
     name: 'Hans Jayden A. Lopez',

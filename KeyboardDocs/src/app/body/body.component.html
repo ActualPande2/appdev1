@@ -1,17 +1,14 @@
 <div class="profile-container">
     <section class="profile-header">
-        <div class="profile-img-container">
-            <img class="profile_img" src="HansLopez.jpg" alt="image">
-        </div>
         <div class="profile-details">
             <div class="name-container">
-                <h1 [style.color]="currentColor">{{profile.name}}</h1>
-                <button (click)="changeNameColor()" class="color-change-btn">
-                    <i class="fas fa-pallete"></i> Change Color
-                </button>
+                <h1>{{profile.name}}</h1>
             </div>
             <h2 class="profile-address">{{profile.address}}</h2>
             <p class="about">{{profile.about}}</p>
+        </div>
+        <div class="profile-img-container">
+            <img class="profile_img" src="Keyboard.png" alt="image">
         </div>
     </section>
 
