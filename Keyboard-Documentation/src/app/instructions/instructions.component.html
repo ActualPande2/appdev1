@@ -1,0 +1,7 @@
+<h3>General Instructions</h3>
+<ul>
+    @for (item of instructions | keyvalue; track item.key) {
+        <li>{{ item.key }}: {{ item.value }}</li>
+    }
+</ul>
+
