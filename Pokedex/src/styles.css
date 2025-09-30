@@ -1,0 +1,79 @@
+.app-layout {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: var(--sidebar-width, 220px);
+    height: 100vh;
+    background-color: #4567b7;
+    color: white;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .content {
+    margin-left: var(--sidebar-width, 220px);
+    padding: 20px;
+    flex: 1;
+  }
+
+.leader-page {
+    padding: 20px;
+    border-radius: 12px;
+    color: #1D3557; 
+  }
+  
+  .leader-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .leader-header img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .leader-info {
+    font-size: 1.2rem;
+  }
+  
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .team-card {
+    background: #FAF3E0; 
+    border: 2px solid #C0C0C0; 
+    border-radius: 10px;
+    padding: 10px;
+    width: 140px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+  
+  .team-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #FAF3E0;
+  margin: 0;
+  padding: 0;
+}
