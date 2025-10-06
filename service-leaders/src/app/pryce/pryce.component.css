@@ -1,0 +1,54 @@
+.leader-img {
+    width: 200px;
+    height: auto;
+}
+  
+.gym-img {
+    width: 300px;
+    height: auto;
+}
+  
+.badge-img {
+    width: 80px;
+    height: auto;
+}
+
+.pokemon-img {
+    width: 100px;
+    height: auto;
+}
+
+.pryce {
+    background: linear-gradient(135deg, #BDE0FE, #FFFFFF);
+    border: 3px solid #1D3557; 
+    border-radius: 12px;
+    padding: 20px;
+    color: #1D3557; 
+}
+
+button {
+    display: inline-block;
+    background-color: #BDE0FE; 
+    color: #1D3557; 
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid #1D3557;      
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 10px 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+  
+button:hover {
+    background-color: #1D3557;      
+    color: #BDE0FE; 
+    border: 3px solid #BDE0FE; 
+    box-shadow: 0 6px 12px rgba(29, 53, 87, 0.4);
+}
+  
+button:active {
+    transform: scale(0.95);
+}
+  

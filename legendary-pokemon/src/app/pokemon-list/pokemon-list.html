@@ -1,0 +1,18 @@
+<h2>Legendary Pokémon</h2>
+    <h3>Kanto Region</h3>
+    <ul>
+        @for (pokemon of kantoLegendaries; track pokemon.name) {
+            <li>
+                <strong>{{ pokemon.name }}</strong> - {{ pokemon.type }}
+            </li>
+        }
+    </ul>
+
+    <h3>Johto Region</h3>
+    <ul>
+        @for (pokemon of johtoLegendaries; track pokemon.name) {
+            <li>
+                <strong>{{ pokemon.name }}</strong> - {{ pokemon.type }}
+            </li>
+        }
+    </ul>

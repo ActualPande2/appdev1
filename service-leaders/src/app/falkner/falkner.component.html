@@ -1,0 +1,24 @@
+<div class="leader-card" [ngClass]="falkner.cssClass">
+    <h2>{{ falkner.name }} – {{ falkner.type }} Type</h2>
+    <p><strong>Location:</strong> {{ falkner.location }}</p>
+  
+    <div class="leader-info">
+        <img [src]="falkner.leaderImg" alt="{{ falkner.name }}" class="leader-img" />
+        <img [src]="falkner.gymImg" alt="{{ falkner.name }} Gym" class="gym-img" />
+    </div>
+  
+    <div class="badge-section">
+        <p><strong>Badge:</strong> {{ falkner.badge }}</p>
+        <img [src]="falkner.badgeImg" alt="{{ falkner.badge }}" class="badge-img" />
+    </div>
+  
+    <div class="pokemon-section">
+        <h3>Pokémon Team</h3>
+        <div class="pokemon-card" *ngFor="let poke of falkner.team">
+            <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            <p>{{ poke.pokemon }} – Lv. {{ poke.level }}</p>
+        </div>
+    </div>
+  
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>

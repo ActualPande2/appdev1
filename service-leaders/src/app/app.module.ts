@@ -13,6 +13,7 @@ import { ChuckComponent } from './chuck/chuck.component';
 import { JasmineComponent } from './jasmine/jasmine.component';
 import { PryceComponent } from './pryce/pryce.component';
 import { ClairComponent } from './clair/clair.component';
+import { LeaderList } from './leader-list/leader-list';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ClairComponent } from './clair/clair.component';
     JasmineComponent,
     PryceComponent,
     ClairComponent,
+    LeaderList,
   ],
   imports: [
     BrowserModule,
