@@ -1,0 +1,26 @@
+<div class="leader-card" [ngClass]="bugsy.cssClass">
+    <h2 class="text-box">{{ bugsy.name }} – {{ bugsy.type }} Type</h2>
+    <span class="text-box" style="margin-left: 8px;"><strong>Location:</strong> {{ bugsy.location }}</span>
+
+    <div class="leader-info">
+        <img [src]="bugsy.leaderImg" alt="{{ bugsy.name }}" class="leader-img" />
+        <img [src]="bugsy.gymImg" alt="{{ bugsy.name }} Gym" class="gym-img" />
+    </div>
+
+    <div class="badge-section">
+        <span class="text-box"><strong>Badge:</strong> {{ bugsy.badge }}</span>
+        <img [src]="bugsy.badgeImg" alt="{{ bugsy.badge }}" class="badge-img" />
+    </div>
+
+    <div class="pokemon-section">
+        <h3 class="text-box">Pokémon Team</h3>
+        <div class="pokemon-list">
+            <div class="pokemon-card" *ngFor="let poke of bugsy.team">
+                <span class="text-box">{{ poke.pokemon }} – Lv. {{ poke.level }}</span>
+                <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>

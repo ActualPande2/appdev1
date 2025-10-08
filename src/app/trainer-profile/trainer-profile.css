@@ -1,0 +1,57 @@
+.trainer-form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f8f8ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #d0d0d0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-team input {
+  margin-bottom: 0.3rem;
+}
+
+button {
+  background: #ffcb05;
+  color: #2a75bb;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #e0e0e0;
+  color: #888;
+}
+
+.trainer-list {
+  margin-top: 2rem;
+}
+
+.trainer-card {
+  background: #e3f2fd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px #b0b0b0;
+}

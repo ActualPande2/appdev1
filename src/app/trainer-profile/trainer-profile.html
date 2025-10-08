@@ -1,0 +1,42 @@
+<div class="trainer-form-container">
+  <h1>Trainer Profile</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" required />
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number" min="1" required />
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input id="address" formControlName="address" type="text" required />
+    </div>
+    <div class="form-group">
+      <label>Pokémon Team:</label>
+      <div class="pokemon-team">
+        <input *ngFor="let ctrl of pokemonTeamControls; let i = index"
+               [formControl]="ctrl"
+               [attr.placeholder]="'Pokémon ' + (i + 1)"
+               type="text"
+               required />
+      </div>
+    </div>
+    <button type="submit" [disabled]="formGroup.invalid">Submit</button>
+  </form>
+
+  <div class="trainer-list" *ngIf="trainerList.length > 0">
+    <h2>Registered Trainers</h2>
+    <div *ngFor="let trainer of trainerList" class="trainer-card">
+      <strong>{{trainer.name}}</strong> (Age: {{trainer.age}})
+      <div>Address: {{trainer.address}}</div>
+      <div>
+        Pokémon Team:
+        <ul>
+          <li *ngFor="let poke of trainer.pokemonTeam">{{ poke }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
