@@ -1,0 +1,26 @@
+<div class="leader-card" [ngClass]="leader.cssClass">
+    <h2 class="text-box">{{ leader.name }} – {{ leader.type }} Type</h2>
+    <span class="text-box" style="margin-left: 8px;"><strong>Location:</strong> {{ leader.location }}</span>
+
+    <div class="leader-info">
+        <img [src]="leader.leaderImg" alt="{{ leader.name }}" class="leader-img" />
+        <img [src]="leader.gymImg" alt="{{ leader.name }} Gym" class="gym-img" />
+    </div>
+
+    <div class="badge-section">
+        <span class="text-box"><strong>Badge:</strong> {{ leader.badge }}</span>
+        <img [src]="leader.badgeImg" alt="{{ leader.badge }}" class="badge-img" />
+    </div>
+
+    <div class="pokemon-section">
+        <h3 class="text-box">Pokémon Team</h3>
+        <div class="pokemon-list">
+            <div class="pokemon-card" *ngFor="let poke of leader.team">
+                <span class="text-box">{{ poke.pokemon }} – Lv. {{ poke.level }}</span>
+                <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>
