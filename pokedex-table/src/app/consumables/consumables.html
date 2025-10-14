@@ -1,0 +1,54 @@
+<div class="consumables-wrapper">
+    <h1>Johto Region Consumables</h1>
+  
+    <div class="tables-container">
+      <div class="card-table">
+        <h2>Johto Berries</h2>
+        <table mat-table [dataSource]="berriesDataSource" class="mat-elevation-z2 custom-table">
+  
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let berry">{{ berry.name }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="flavor">
+            <th mat-header-cell *matHeaderCellDef>Flavor</th>
+            <td mat-cell *matCellDef="let berry">{{ berry.flavor }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="effect">
+            <th mat-header-cell *matHeaderCellDef>Effect</th>
+            <td mat-cell *matCellDef="let berry">{{ berry.effect }}</td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="berriesColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: berriesColumns;"></tr>
+        </table>
+      </div>
+  
+      <div class="card-table">
+        <h2>Johto Pokéballs</h2>
+        <table mat-table [dataSource]="pokeballsDataSource" class="mat-elevation-z2 custom-table">
+  
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let ball">{{ ball.name }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef>Type</th>
+            <td mat-cell *matCellDef="let ball">{{ ball.type }}</td>
+          </ng-container>
+  
+          <ng-container matColumnDef="catchRate">
+            <th mat-header-cell *matHeaderCellDef>Catch Rate</th>
+            <td mat-cell *matCellDef="let ball">{{ ball.catchRate }}</td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="pokeballsColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: pokeballsColumns;"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="leader-card" [ngClass]="jasmine.cssClass">
+    <h2 class="text-box">{{ jasmine.name }} – {{ jasmine.type }} Type</h2>
+    <span class="text-box" style="margin-left: 8px;"><strong>Location:</strong> {{ jasmine.location }}</span>
+
+    <div class="leader-info">
+        <img [src]="jasmine.leaderImg" alt="{{ jasmine.name }}" class="leader-img" />
+        <img [src]="jasmine.gymImg" alt="{{ jasmine.name }} Gym" class="gym-img" />
+    </div>
+
+    <div class="badge-section">
+        <span class="text-box"><strong>Badge:</strong> {{ jasmine.badge }}</span>
+        <img [src]="jasmine.badgeImg" alt="{{ jasmine.badge }}" class="badge-img" />
+    </div>
+
+    <div class="pokemon-section">
+        <h3 class="text-box">Pokémon Team</h3>
+        <div class="pokemon-list">
+            <div class="pokemon-card" *ngFor="let poke of jasmine.team">
+                <span class="text-box">{{ poke.pokemon }} – Lv. {{ poke.level }}</span>
+                <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>

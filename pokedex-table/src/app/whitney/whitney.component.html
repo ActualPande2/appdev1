@@ -1,0 +1,26 @@
+<div class="leader-card" [ngClass]="whitney.cssClass">
+    <h2 class="text-box">{{ whitney.name }} – {{ whitney.type }} Type</h2>
+    <span class="text-box" style="margin-left: 8px;"><strong>Location:</strong> {{ whitney.location }}</span>
+
+    <div class="leader-info">
+        <img [src]="whitney.leaderImg" alt="{{ whitney.name }}" class="leader-img" />
+        <img [src]="whitney.gymImg" alt="{{ whitney.name }} Gym" class="gym-img" />
+    </div>
+
+    <div class="badge-section">
+        <span class="text-box"><strong>Badge:</strong> {{ whitney.badge }}</span>
+        <img [src]="whitney.badgeImg" alt="{{ whitney.badge }}" class="badge-img" />
+    </div>
+
+    <div class="pokemon-section">
+        <h3 class="text-box">Pokémon Team</h3>
+        <div class="pokemon-list">
+            <div class="pokemon-card" *ngFor="let poke of whitney.team">
+                <span class="text-box">{{ poke.pokemon }} – Lv. {{ poke.level }}</span>
+                <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>

@@ -1,0 +1,79 @@
+<div class="trainer-container">
+  <h1>Johto Trainer Profile</h1>
+
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="trainer-form">
+    <label>Name:</label>
+    <input type="text" formControlName="name" placeholder="Enter your name" />
+
+    <label>Age:</label>
+    <input type="number" formControlName="age" placeholder="Enter your age" />
+
+    <label>Address:</label>
+    <input type="text" formControlName="address" placeholder="Enter your address" />
+
+    <div class="pokemon-section">
+      <h3>Enter Your Pokémon Team</h3>
+      <div class="pokemon-grid">
+        <input type="text" formControlName="pokemon1" placeholder="Pokémon 1" />
+        <input type="text" formControlName="pokemon2" placeholder="Pokémon 2" />
+        <input type="text" formControlName="pokemon3" placeholder="Pokémon 3" />
+        <input type="text" formControlName="pokemon4" placeholder="Pokémon 4" />
+        <input type="text" formControlName="pokemon5" placeholder="Pokémon 5" />
+        <input type="text" formControlName="pokemon6" placeholder="Pokémon 6" />
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!formGroup.valid">Register Trainer</button>
+  </form>
+
+  <!-- Real-Time Display -->
+  <div class="realtime-values">
+    <h2>Real-Time Trainer Info</h2>
+    <div class="label">Name:</div>
+    <div class="value">{{ formGroup.get('name')?.value }}</div>
+    <div class="label">Age:</div>
+    <div class="value">{{ formGroup.get('age')?.value }}</div>
+    <div class="label">Address:</div>
+    <div class="value">{{ formGroup.get('address')?.value }}</div>
+
+    <div class="label">Pokémon Team:</div>
+    <div class="value">
+      {{ formGroup.get('pokemon1')?.value }},
+      {{ formGroup.get('pokemon2')?.value }},
+      {{ formGroup.get('pokemon3')?.value }},
+      {{ formGroup.get('pokemon4')?.value }},
+      {{ formGroup.get('pokemon5')?.value }},
+      {{ formGroup.get('pokemon6')?.value }}
+    </div>
+  </div>
+
+  <!-- Registered Trainers -->
+  <h2>Registered Trainers</h2>
+  <div class="trainer-list">
+    @if (trainerList.length === 0) {
+      <div class="no-data">No trainers registered yet.</div>
+    } @else {
+      @for (trainer of trainerList; track $index) {
+        <div class="trainer-card">
+          <div class="card-header">
+            <h3>{{ trainer.name }} (Age {{ trainer.age }})</h3>
+            <button class="delete-btn" (click)="deleteProfile($index)">Delete</button>
+          </div>
+          <p><strong>Address:</strong> {{ trainer.address }}</p>
+          <ul>
+            <li>{{ trainer.pokemon1 }}</li>
+            <li>{{ trainer.pokemon2 }}</li>
+            <li>{{ trainer.pokemon3 }}</li>
+            <li>{{ trainer.pokemon4 }}</li>
+            <li>{{ trainer.pokemon5 }}</li>
+            <li>{{ trainer.pokemon6 }}</li>
+          </ul>
+        </div>
+      }
+    }
+  </div>
+
+  <ng-template #noData>
+    <p class="no-data">No registered trainers yet.</p>
+  </ng-template>
+</div>

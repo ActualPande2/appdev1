@@ -1,0 +1,26 @@
+<div class="leader-card" [ngClass]="chuck.cssClass">
+    <h2 class="text-box">{{ chuck.name }} – {{ chuck.type }} Type</h2>
+    <span class="text-box" style="margin-left: 8px;"><strong>Location:</strong> {{ chuck.location }}</span>
+
+    <div class="leader-info">
+        <img [src]="chuck.leaderImg" alt="{{ chuck.name }}" class="leader-img" />
+        <img [src]="chuck.gymImg" alt="{{ chuck.name }} Gym" class="gym-img" />
+    </div>
+
+    <div class="badge-section">
+        <span class="text-box"><strong>Badge:</strong> {{ chuck.badge }}</span>
+        <img [src]="chuck.badgeImg" alt="{{ chuck.badge }}" class="badge-img" />
+    </div>
+
+    <div class="pokemon-section">
+        <h3 class="text-box">Pokémon Team</h3>
+        <div class="pokemon-list">
+            <div class="pokemon-card" *ngFor="let poke of chuck.team">
+                <span class="text-box">{{ poke.pokemon }} – Lv. {{ poke.level }}</span>
+                <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>
