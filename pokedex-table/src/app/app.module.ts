@@ -34,8 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     JasmineComponent,
     PryceComponent,
     ClairComponent,
-    LeaderList,
-
+    LeaderList
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,89 @@
+/* Layout + background */
+.consumables-wrapper {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8e7;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  /* Page header */
+  h1 {
+    text-align: center;
+    color: #5a3e1b;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  /* Flex layout for cards */
+  .tables-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* Card table containers */
+  .card-table {
+    background: #fffaf3;
+    border: 2px solid #d1b48c;
+    border-radius: 15px;
+    padding: 1.5rem;
+    flex: 1 1 45%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(92, 64, 29, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card-table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(92, 64, 29, 0.25);
+  }
+  
+  /* Section titles */
+  .card-table h2 {
+    color: #7a4a0a;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Material table design */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th.mat-header-cell {
+    background-color: #c69b6d;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  td.mat-cell {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e6d2b5;
+    color: #4a3720;
+  }
+  
+  /* Row hover */
+  tr.mat-row:hover {
+    background-color: #f6ebd4;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .tables-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card-table {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+  

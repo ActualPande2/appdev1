@@ -1,0 +1,26 @@
+<div class="leader-card" [ngClass]="claire.cssClass">
+    <h2 class="text-box">{{ claire.name }} – {{ claire.type }} Type</h2>
+    <span class="text-box" style="margin-left: 8px;"><strong>Location:</strong> {{ claire.location }}</span>
+
+    <div class="leader-info">
+        <img [src]="claire.leaderImg" alt="{{ claire.name }}" class="leader-img" />
+        <img [src]="claire.gymImg" alt="{{ claire.name }} Gym" class="gym-img" />
+    </div>
+
+    <div class="badge-section">
+        <span class="text-box"><strong>Badge:</strong> {{ claire.badge }}</span>
+        <img [src]="claire.badgeImg" alt="{{ claire.badge }}" class="badge-img" />
+    </div>
+
+    <div class="pokemon-section">
+        <h3 class="text-box">Pokémon Team</h3>
+        <div class="pokemon-list">
+            <div class="pokemon-card" *ngFor="let poke of claire.team">
+                <span class="text-box">{{ poke.pokemon }} – Lv. {{ poke.level }}</span>
+                <img [src]="poke.img" alt="{{ poke.pokemon }}" class="pokemon-img" />
+            </div>
+        </div>
+    </div>
+
+    <button routerLink="/">⬅ Back to Landing</button>
+</div>
