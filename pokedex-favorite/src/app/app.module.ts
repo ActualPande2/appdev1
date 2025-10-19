@@ -25,6 +25,9 @@ import { Delphox } from './delphox/delphox';
 import { Lopunny } from './lopunny/lopunny';
 import { Ditto } from './ditto/ditto';
 import { Meowscarada } from './meowscarada/meowscarada';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 
 @NgModule({
@@ -56,7 +59,9 @@ import { Meowscarada } from './meowscarada/meowscarada';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

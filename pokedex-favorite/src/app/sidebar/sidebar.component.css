@@ -1,67 +1,124 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   width: var(--sidebar-width, 240px);
   height: 100vh;
-  background-color: #264653; 
+  background-color: #264653;
   overflow-y: auto;
   box-shadow: 3px 0 8px rgba(0, 0, 0, 0.25);
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   padding: 20px 0;
+  font-family: 'Fredoka One', 'Comic Neue', 'Comic Sans MS', cursive !important;
+  color: #fff;
 }
 
-.sidebar h2 {
-  color: #FFD700; 
+/* --- Home Title --- */
+.sidebar-title {
   text-align: center;
-  font-size: 1.4rem;
-  margin: 0 0 20px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
 }
 
-.sidebar ul {
+.home-link {
+  text-decoration: none;
+  color: #FFD700;
+  display: inline-block;
+  padding: 10px 18px;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffef99;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+/* --- Collapsible Sections --- */
+.collapsible {
+  cursor: pointer;
+  color: #FFD700;
+  font-size: 1.2rem;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.collapsible:hover {
+  background-color: #2a5a6c;
+  border-left: 4px solid #e9c46a;
+}
+
+.arrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+}
+
+/* --- Dropdown Submenus --- */
+.submenu {
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 20px;
   margin: 0;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.sidebar li {
+.submenu li {
   margin: 6px 0;
 }
 
-.sidebar a {
+.submenu a {
   display: block;
-  color: #f1faee; 
-  font-weight: 600;
+  padding: 8px 12px;
   text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s, transform 0.2s;
+  color: #f1faee;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.sidebar a:hover {
-  background-color: #e76f51; 
+.submenu a:hover {
+  background-color: #e76f51;
   color: #fff;
   transform: translateX(4px);
 }
 
-.sidebar a:active {
-  background-color: #d00000; 
+/* --- Trainer Profile Button --- */
+.extra-link {
+  margin-top: 25px;
+  text-align: center;
 }
 
-.sidebar li + li {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+.extra-link a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px 18px;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-  }
+.extra-link a:hover {
+  background: rgba(255, 215, 0, 0.2);
+  color: #fff8d6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
 
-  .sidebar h2 {
-    font-size: 1.2rem;
-  }
+/* --- Animation --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }

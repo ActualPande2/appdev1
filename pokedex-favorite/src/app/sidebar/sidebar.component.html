@@ -1,6 +1,14 @@
 <div class="sidebar">
-    <h2>Johto Gym Leaders</h2>
-    <ul>
+    <h1 class="sidebar-title">
+      <a routerLink="/" class="home-link">Johto Region Pokédex</a>
+    </h1>
+  
+    <h2 (click)="toggleSection('leaders')" class="collapsible">
+      Johto Gym Leaders
+      <span class="arrow" [class.open]="openSection === 'leaders'">▶</span>
+    </h2>
+    @if (openSection === 'leaders') {
+      <ul class="submenu">
         <li><a routerLink="/falkner">Falkner</a></li>
         <li><a routerLink="/bugsy">Bugsy</a></li>
         <li><a routerLink="/whitney">Whitney</a></li>
@@ -9,12 +17,37 @@
         <li><a routerLink="/jasmine">Jasmine</a></li>
         <li><a routerLink="/pryce">Pryce</a></li>
         <li><a routerLink="/clair">Claire</a></li>
-        <li><a routerLink="/trainer-profile">Trainer Profile</a></li>
-    </ul>
-    <br>
-    <h2>Johto Region Consumables</h2>
-    <ul>
+      </ul>
+    }
+  
+    <h2 (click)="toggleSection('consumables')" class="collapsible">
+      Johto Region Consumables
+      <span class="arrow" [class.open]="openSection === 'consumables'">▶</span>
+    </h2>
+    @if (openSection === 'consumables') {
+      <ul class="submenu">
         <li><a routerLink="/consumables">Berries</a></li>
-        <li><a routerLink="/consumables2">Pokeballs</a></li>
-    </ul>
-</div>
+        <li><a routerLink="/consumables2">Pokéballs</a></li>
+      </ul>
+    }
+  
+    <h2 (click)="toggleSection('favorites')" class="collapsible">
+      Favorite Pokémon
+      <span class="arrow" [class.open]="openSection === 'favorites'">▶</span>
+    </h2>
+    @if (openSection === 'favorites') {
+      <ul class="submenu">
+        <li><a routerLink="/victini">Victini</a></li>
+        <li><a routerLink="/gardevoir">Gardevoir</a></li>
+        <li><a routerLink="/delphox">Delphox</a></li>
+        <li><a routerLink="/lopunny">Lopunny</a></li>
+        <li><a routerLink="/ditto">Ditto</a></li>
+        <li><a routerLink="/meowscarada">Meowscarada</a></li>
+      </ul>
+    }
+  
+    <div class="extra-link">
+      <a routerLink="/trainer-profile">Trainer Profile</a>
+    </div>
+  </div>
+  

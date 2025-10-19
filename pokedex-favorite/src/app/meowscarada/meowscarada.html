@@ -1,1 +1,46 @@
-<p>meowscarada works!</p>
+@if (pokemonData) {
+    <div class="pokemon-container">
+      <h1>{{ pokemonData.name | titlecase }}</h1>
+  
+      <img
+        [src]="pokemonData.sprites.other['official-artwork'].front_default"
+        alt="{{ pokemonData.name }}"
+        class="pokemon-image"
+      />
+  
+      <mat-divider></mat-divider>
+  
+      <div class="info-section">
+        <h3>Type</h3>
+        <p>
+          @for (t of pokemonData.types; track $index) {
+            {{ t.type.name | titlecase }}<span *ngIf="!$last">, </span>
+          }
+        </p>
+  
+        <h3>Base Experience</h3>
+        <p>{{ pokemonData.base_experience }}</p>
+  
+        <h3>Abilities</h3>
+        <ul>
+          @for (ability of pokemonData.abilities; track $index) {
+            <li>{{ ability.ability.name | titlecase }}</li>
+          }
+        </ul>
+  
+        <h3>Stats</h3>
+        <ul>
+          @for (stat of pokemonData.stats; track $index) {
+            <li>{{ stat.stat.name | titlecase }}: {{ stat.base_stat }}</li>
+          }
+        </ul>
+  
+        <h3>Weight</h3>
+        <p>{{ pokemonData.weight }}</p>
+      </div>
+    </div>
+  } @else {
+    <div class="loading">
+      <p>Loading Victini data...</p>
+    </div>
+  }

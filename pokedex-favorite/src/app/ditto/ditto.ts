@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-ditto',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './ditto.css'
 })
 export class Ditto {
+  pokemonData: any;
 
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http.get('https://pokeapi.co/api/v2/pokemon/ditto').subscribe((data) => {
+      this.pokemonData = data;
+    });
+  }
 }

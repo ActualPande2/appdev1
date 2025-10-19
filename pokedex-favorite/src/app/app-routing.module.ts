@@ -12,6 +12,12 @@ import { ClairComponent } from './clair/clair.component';
 import { TrainerProfile } from './trainer-profile/trainer-profile';
 import { Consumables } from './consumables/consumables';
 import { Consumable2 } from './consumable2/consumable2';
+import { Victini } from './victini/victini';
+import { Gardevoir } from './gardevoir/gardevoir';
+import { Delphox } from './delphox/delphox';
+import { Lopunny } from './lopunny/lopunny';
+import { Ditto } from './ditto/ditto';
+import { Meowscarada } from './meowscarada/meowscarada';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -25,7 +31,13 @@ const routes: Routes = [
   {path: 'clair', component: ClairComponent},
   {path: 'trainer-profile', component: TrainerProfile},
   {path: 'consumables', component: Consumables},
-  {path: 'consumables2', component: Consumable2}
+  {path: 'consumables2', component: Consumable2},
+  {path: 'victini', component: Victini},
+  {path: 'gardevoir', component: Gardevoir},
+  {path: 'delphox', component: Delphox},
+  {path: 'lopunny', component: Lopunny},
+  {path: 'ditto', component: Ditto},
+  {path: 'meowscarada', component: Meowscarada}
 ];
 
 @NgModule({

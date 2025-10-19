@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+  openSection: string | null = 'leaders';
 
+  toggleSection(section: string): void {
+    this.openSection = this.openSection === section ? null : section;
+  }
 }
