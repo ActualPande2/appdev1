@@ -1,0 +1,32 @@
+<div class="pokemon-container">
+  <div class="pokemon-image">
+    <img [src]="pokemon.image" [alt]="pokemon.name" class="pokemon-img"/>
+  </div>
+
+  <div class="pokemon-info">
+    <h2>{{ pokemon.name }}</h2>
+    <p class="type">{{ pokemon.type }} Type</p>
+
+    <div class="stats">
+      <p><strong>HP:</strong> {{ pokemon.health }}</p>
+      <p><strong>Attack:</strong> {{ pokemon.attack }}</p>
+      <p><strong>Defense:</strong> {{ pokemon.defense }}</p>
+      <p><strong>Sp. Attack:</strong> {{ pokemon.Specialattack }}</p>
+      <p><strong>Sp. Defense:</strong> {{ pokemon.Specialdefense }}</p>
+      <p><strong>Speed:</strong> {{ pokemon.speed }}</p>
+      <p><strong>Total:</strong> {{ pokemon.total }}</p>
+    </div>
+
+    <div class="moves:">
+      <h4>Moves</h4>
+      <ul>
+        <li *ngFor="let move of pokemon.Moves">{{ move }}</li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <button (click)="revert()" [disabled]="currentStage === 1">Revert</button>
+      <button (click)="evolve()" [disabled]="currentStage === 3">Evolve</button>
+    </div>
+  </div>
+</div>

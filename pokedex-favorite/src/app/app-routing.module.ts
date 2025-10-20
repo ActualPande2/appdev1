@@ -18,6 +18,12 @@ import { Delphox } from './delphox/delphox';
 import { Lopunny } from './lopunny/lopunny';
 import { Ditto } from './ditto/ditto';
 import { Meowscarada } from './meowscarada/meowscarada';
+import { Espeon } from './espeon/espeon';
+import { Umbreon } from './umbreon/umbreon';
+import { Chikorita } from './chikorita/chikorita';
+import { Cyndaquil } from './cyndaquil/cyndaquil';
+import { Totodile } from './totodile/totodile';
+import { Ampharos } from './ampharos/ampharos';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -37,7 +43,13 @@ const routes: Routes = [
   {path: 'delphox', component: Delphox},
   {path: 'lopunny', component: Lopunny},
   {path: 'ditto', component: Ditto},
-  {path: 'meowscarada', component: Meowscarada}
+  {path: 'meowscarada', component: Meowscarada},
+  {path: 'espeon', component: Espeon},
+  {path: 'umbreon', component: Umbreon},
+  {path: 'chikorita', component: Chikorita},
+  {path: 'cyndaquil', component: Cyndaquil},
+  {path: 'totodile', component: Totodile},
+  {path: 'ampharos', component: Ampharos}
 ];
 
 @NgModule({

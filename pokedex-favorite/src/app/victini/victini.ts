@@ -10,11 +10,16 @@ import { HttpClient } from '@angular/common/http';
 export class Victini {
   pokemonData: any;
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http.get('https://pokeapi.co/api/v2/pokemon/victini').subscribe((data) => {
-      this.pokemonData = data;
-    });
+  constructor(private http: HttpClient) {
+    this.http.get('https://pokeapi.co/api/v2/pokemon/victini').subscribe(
+      response => {
+        this.pokemonData = response;
+      },
+      error => {
+        console.error('Error fetching Victini data:', error);
+      }
+    );
   }
+
+
 }

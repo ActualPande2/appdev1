@@ -27,6 +27,12 @@ import { Ditto } from './ditto/ditto';
 import { Meowscarada } from './meowscarada/meowscarada';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDividerModule } from '@angular/material/divider';
+import { Espeon } from './espeon/espeon';
+import { Umbreon } from './umbreon/umbreon';
+import { Chikorita } from './chikorita/chikorita';
+import { Cyndaquil } from './cyndaquil/cyndaquil';
+import { Totodile } from './totodile/totodile';
+import { Ampharos } from './ampharos/ampharos';
 
 
 
@@ -49,7 +55,13 @@ import { MatDividerModule } from '@angular/material/divider';
     Delphox,
     Lopunny,
     Ditto,
-    Meowscarada
+    Meowscarada,
+    Espeon,
+    Umbreon,
+    Chikorita,
+    Cyndaquil,
+    Totodile,
+    Ampharos
   ],
   imports: [
     BrowserModule,

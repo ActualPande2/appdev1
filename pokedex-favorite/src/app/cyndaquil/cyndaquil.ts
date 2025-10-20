@@ -2,21 +2,21 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-delphox',
+  selector: 'app-cyndaquil',
   standalone: false,
-  templateUrl: './delphox.html',
-  styleUrl: './delphox.css'
+  templateUrl: './cyndaquil.html',
+  styleUrl: './cyndaquil.css'
 })
-export class Delphox {
+export class Cyndaquil {
   pokemonData: any;
 
   constructor(private http: HttpClient) {
-    this.http.get('https://pokeapi.co/api/v2/pokemon/delphox').subscribe(
+    this.http.get('https://pokeapi.co/api/v2/pokemon/cyndaquil').subscribe(
       response => {
         this.pokemonData = response;
       },
       error => {
-        console.error('Error fetching Delphox data:', error);
+        console.error('Error fetching Cyndaquil data:', error);
       }
     );
   }

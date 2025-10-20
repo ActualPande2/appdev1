@@ -2,21 +2,21 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-delphox',
+  selector: 'app-umbreon',
   standalone: false,
-  templateUrl: './delphox.html',
-  styleUrl: './delphox.css'
+  templateUrl: './umbreon.html',
+  styleUrl: './umbreon.css'
 })
-export class Delphox {
+export class Umbreon {
   pokemonData: any;
 
   constructor(private http: HttpClient) {
-    this.http.get('https://pokeapi.co/api/v2/pokemon/delphox').subscribe(
+    this.http.get('https://pokeapi.co/api/v2/pokemon/umbreon').subscribe(
       response => {
         this.pokemonData = response;
       },
       error => {
-        console.error('Error fetching Delphox data:', error);
+        console.error('Error fetching Umbreon data:', error);
       }
     );
   }

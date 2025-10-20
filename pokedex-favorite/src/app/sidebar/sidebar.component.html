@@ -1,53 +1,67 @@
 <div class="sidebar">
-    <h1 class="sidebar-title">
-      <a routerLink="/" class="home-link">Johto Region Pokédex</a>
-    </h1>
-  
-    <h2 (click)="toggleSection('leaders')" class="collapsible">
-      Johto Gym Leaders
-      <span class="arrow" [class.open]="openSection === 'leaders'">▶</span>
-    </h2>
-    @if (openSection === 'leaders') {
-      <ul class="submenu">
-        <li><a routerLink="/falkner">Falkner</a></li>
-        <li><a routerLink="/bugsy">Bugsy</a></li>
-        <li><a routerLink="/whitney">Whitney</a></li>
-        <li><a routerLink="/morty">Morty</a></li>
-        <li><a routerLink="/chuck">Chuck</a></li>
-        <li><a routerLink="/jasmine">Jasmine</a></li>
-        <li><a routerLink="/pryce">Pryce</a></li>
-        <li><a routerLink="/clair">Claire</a></li>
-      </ul>
-    }
-  
-    <h2 (click)="toggleSection('consumables')" class="collapsible">
-      Johto Region Consumables
-      <span class="arrow" [class.open]="openSection === 'consumables'">▶</span>
-    </h2>
-    @if (openSection === 'consumables') {
-      <ul class="submenu">
-        <li><a routerLink="/consumables">Berries</a></li>
-        <li><a routerLink="/consumables2">Pokéballs</a></li>
-      </ul>
-    }
-  
-    <h2 (click)="toggleSection('favorites')" class="collapsible">
-      Favorite Pokémon
-      <span class="arrow" [class.open]="openSection === 'favorites'">▶</span>
-    </h2>
-    @if (openSection === 'favorites') {
-      <ul class="submenu">
-        <li><a routerLink="/victini">Victini</a></li>
-        <li><a routerLink="/gardevoir">Gardevoir</a></li>
-        <li><a routerLink="/delphox">Delphox</a></li>
-        <li><a routerLink="/lopunny">Lopunny</a></li>
-        <li><a routerLink="/ditto">Ditto</a></li>
-        <li><a routerLink="/meowscarada">Meowscarada</a></li>
-      </ul>
-    }
-  
-    <div class="extra-link">
-      <a routerLink="/trainer-profile">Trainer Profile</a>
-    </div>
+  <h1 class="sidebar-title">
+    <a routerLink="/" class="home-link">Johto Region Pokédex</a>
+  </h1>
+
+  <h2 (click)="toggleSection('leaders')" class="collapsible">
+    Johto Gym Leaders
+    <span class="arrow" [class.open]="openSection === 'leaders'">▶</span>
+  </h2>
+  @if (openSection === 'leaders') {
+    <ul class="submenu">
+      <li><a routerLink="/falkner">Falkner</a></li>
+      <li><a routerLink="/bugsy">Bugsy</a></li>
+      <li><a routerLink="/whitney">Whitney</a></li>
+      <li><a routerLink="/morty">Morty</a></li>
+      <li><a routerLink="/chuck">Chuck</a></li>
+      <li><a routerLink="/jasmine">Jasmine</a></li>
+      <li><a routerLink="/pryce">Pryce</a></li>
+      <li><a routerLink="/clair">Claire</a></li>
+    </ul>
+  }
+
+  <h2 (click)="toggleSection('consumables')" class="collapsible">
+    Johto Region Consumables
+    <span class="arrow" [class.open]="openSection === 'consumables'">▶</span>
+  </h2>
+  @if (openSection === 'consumables') {
+    <ul class="submenu">
+      <li><a routerLink="/consumables">Berries</a></li>
+      <li><a routerLink="/consumables2">Pokéballs</a></li>
+    </ul>
+  }
+
+  <h2 (click)="toggleSection('johto-favorites')" class="collapsible">
+    Johto Favorites
+    <span class="arrow" [class.open]="openSection === 'johto-favorites'">▶</span>
+  </h2>
+  @if (openSection === 'johto-favorites') {
+    <ul class="submenu">
+      <li><a routerLink="/espeon">Espeon</a></li>
+      <li><a routerLink="/umbreon">Umbreon</a></li>
+      <li><a routerLink="/chikorita">Chikorita</a></li>
+      <li><a routerLink="/cyndaquil">Cyndaquil</a></li>
+      <li><a routerLink="/totodile">Totodile</a></li>
+      <li><a routerLink="/ampharos">Ampharos</a></li>
+    </ul>
+  }
+
+  <h2 (click)="toggleSection('favorites')" class="collapsible">
+    Favorite Pokémon
+    <span class="arrow" [class.open]="openSection === 'favorites'">▶</span>
+  </h2>
+  @if (openSection === 'favorites') {
+    <ul class="submenu">
+      <li><a routerLink="/victini">Victini</a></li>
+      <li><a routerLink="/gardevoir">Gardevoir</a></li>
+      <li><a routerLink="/delphox">Delphox</a></li>
+      <li><a routerLink="/lopunny">Lopunny</a></li>
+      <li><a routerLink="/ditto">Ditto</a></li>
+      <li><a routerLink="/meowscarada">Meowscarada</a></li>
+    </ul>
+  }
+
+  <div class="extra-link">
+    <a routerLink="/trainer-profile">Trainer Profile</a>
   </div>
-  
+</div>

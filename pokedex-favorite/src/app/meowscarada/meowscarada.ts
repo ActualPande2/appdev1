@@ -10,11 +10,14 @@ import { HttpClient } from '@angular/common/http';
 export class Meowscarada {
   pokemonData: any;
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http.get('https://pokeapi.co/api/v2/pokemon/meowscarada').subscribe((data) => {
-      this.pokemonData = data;
-    });
+  constructor(private http: HttpClient) {
+    this.http.get('https://pokeapi.co/api/v2/pokemon/meowscarada').subscribe(
+      response => {
+        this.pokemonData = response;
+      },
+      error => {
+        console.error('Error fetching Meowscarada data:', error);
+      }
+    );
   }
 }
